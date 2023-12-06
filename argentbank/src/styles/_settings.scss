@@ -1,0 +1,35 @@
+//COLORS
+$main-color: #2c3e50;
+$secondary-color: #000000;
+$text-color : white;
+$details-color: #00bc77;
+$background-color: #12002b;
+$background-color2: grey;
+
+
+//FONT-SIZE
+$fs-subtitle: 1.5em;
+$fs-text: 1.2em;
+$fs-text2 : 1em;
+
+h1, h2, h3, h4, p, img {
+    margin: 0;
+}
+
+body {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    margin: 0;
+    color: $main-color;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+input {
+    border: 1px solid grey;
+    border-radius: 3px;
+}

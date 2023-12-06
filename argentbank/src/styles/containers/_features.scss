@@ -1,0 +1,11 @@
+.features {
+    display: flex;
+    color: $secondary-color;
+}
+
+@media (max-width: 920px) {
+    .features {
+        display: flex;
+        flex-direction: column;
+    }
+}

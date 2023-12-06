@@ -1,0 +1,19 @@
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem;
+    flex: 1;
+    gap: 22px;
+}
+.feature-item__text, .feature-item__title {
+    text-align: center;
+}
+
+.feature-item__icon {
+    width: 100px;
+    border: 10px solid $details-color;
+    border-radius: 50%;
+    padding: 1rem;
+
+}

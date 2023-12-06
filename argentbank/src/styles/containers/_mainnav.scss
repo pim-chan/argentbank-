@@ -1,0 +1,20 @@
+.main-nav {
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    a {
+        text-decoration: none;
+        &:visited {
+            color: $main-color;
+        }
+    }
+}
+
+.main-nav__items {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+

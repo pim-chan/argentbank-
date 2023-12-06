@@ -1,0 +1,10 @@
+.signin-link-container {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    p {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

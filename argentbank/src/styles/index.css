@@ -1,0 +1,216 @@
+h1, h2, h3, h4, p, img {
+  margin: 0;
+}
+
+body {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  margin: 0;
+  color: #2c3e50;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.signin {
+  background-color: #12002b;
+  flex: 1;
+}
+
+.user {
+  background-color: white;
+  padding: 25px 0;
+}
+
+.accounts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.main-nav {
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-nav a {
+  text-decoration: none;
+}
+.main-nav a:visited {
+  color: #2c3e50;
+}
+
+.main-nav__items {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.banner {
+  height: 400px;
+  position: relative;
+  background: url(../../../public/images/bank-tree.jpeg) center/cover;
+}
+
+.banner {
+  height: 400px;
+  position: relative;
+  background: url(../../../public/images/bank-tree.jpeg) center/cover;
+}
+
+.features {
+  display: flex;
+  color: #000000;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid #ccc;
+  padding: 2rem 0 1.5rem;
+}
+
+.signin-content {
+  box-sizing: border-box;
+  background-color: white;
+  width: 300px;
+  margin: 3em auto 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.signin-content__title {
+  margin: 20px 0;
+}
+
+.logo {
+  width: 200px;
+  height: 100%;
+}
+
+.banner-content {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 300px;
+  margin: 2rem;
+  background: white;
+  padding: 2rem;
+  text-align: left;
+}
+.banner-content__subtitle {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.banner-content__text {
+  font-size: 1.2em;
+  margin-top: 19px;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem;
+  flex: 1;
+  gap: 22px;
+}
+
+.feature-item__text, .feature-item__title {
+  text-align: center;
+}
+
+.feature-item__icon {
+  width: 100px;
+  border: 10px solid #00bc77;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.signin-link-container {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.signin-link-container p {
+  font-weight: bold;
+}
+.signin-link-container p:hover {
+  text-decoration: underline;
+}
+
+.signin-form button {
+  margin: 0;
+  width: 100%;
+  display: block;
+  padding: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  border-color: #00bc77;
+  background-color: #00bc77;
+  color: #fff;
+}
+
+.account button {
+  background-color: transparent;
+  border: none;
+}
+.account button svg {
+  height: 65px;
+  fill: white;
+}
+
+.account {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: gray;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  text-align: left;
+  border-radius: 10px;
+  color: white;
+}
+.account__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.account__title {
+  font-size: 1em;
+  font-weight: normal;
+}
+.account__amount {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.signin-form label {
+  font-weight: bold;
+}
+.signin-form label:nth-child(3) {
+  font-weight: normal;
+}
+
+.input-wrapper {
+  padding: 5px;
+  font-size: 1.2rem;
+}
+
+.logout svg {
+  display: flex;
+  height: 20px;
+}/*# sourceMappingURL=index.css.map */

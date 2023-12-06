@@ -1,0 +1,39 @@
+.button {
+    background-color: $details-color;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 50px;
+    background-color: $details-color;
+    width: fit-content;
+} 
+
+.signin-form button {
+    margin: 0;
+    width: 100%;
+    display: block;
+    padding: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.account button {
+    background-color: transparent;
+    border: none;
+    svg {
+        height: 65px;
+        fill: white;
+    }
+}
+
+.user-form button {
+    border: none;
+    color: $text-color;
+    border-radius: 3px;
+}
+
+
+
+
+

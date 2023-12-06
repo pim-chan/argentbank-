@@ -1,0 +1,20 @@
+.signin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    label {
+        font-weight: bold;
+        &:nth-child(3) {
+            font-weight: normal;
+        }  
+    }
+}
+
+.signin-form .input {
+    padding: 5px;
+    font-size: 1.2rem;
+}
+
+.remember-me {
+    display: flex;
+}
