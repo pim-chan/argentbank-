@@ -1,18 +1,15 @@
 .banner-content {
-    position: absolute;
-    top: 50px;
-    right: 50px;
     width: 300px;
     margin: 2rem;
     background: white;
     padding: 2rem;
     text-align: left;
     &__subtitle {
-        font-size: $fs-subtitle;
+        font-size: $text1;
         font-weight: bold;
     }
     &__text {
-        font-size: $fs-text;
+        font-size: $text1;
         margin-top: 19px;
     }
 }

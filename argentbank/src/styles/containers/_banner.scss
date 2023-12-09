@@ -1,8 +1,10 @@
 .banner {
     height: 400px;
-    position: relative;
     background: url(../../../public/images/bank-tree.webp) center/cover;
     background-position: 0% 33%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 } 
 
 @media (max-width: 920px) {

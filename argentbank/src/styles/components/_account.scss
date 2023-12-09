@@ -19,12 +19,41 @@
 
 .account {
     &__title {
-        font-size: $fs-text2;
+        font-size: $text2;
         font-weight: normal;
     }
     &__amount {
         font-size: 2.5rem;
         font-weight: bold;
+    }
+}
+
+.account button {
+    background-color: transparent;
+    border: none;
+    svg {
+        height: 65px;
+        fill: white;
+    }
+}
+
+@media screen and (max-width: 767.99px) {
+    .account {
+        &__title {
+            font-size: $r-text2;
+            font-weight: normal;
+        }
+        &__amount {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        &__amount-description {
+            font-size: $r-text2;
+        }
+    }
+
+    .account button svg {
+        height: 35px;
     }
 }
 
