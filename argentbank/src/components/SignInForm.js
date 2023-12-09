@@ -8,6 +8,7 @@ const SignInForm = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [remember, setRemember] = useState(false)
+    const [errorMessage, setErrorMessage] = useState('')
 
     const dispatch = useDispatch();
 
@@ -15,7 +16,7 @@ const SignInForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+    
         try {
             const formData = {
                 email: email,
@@ -30,10 +31,12 @@ const SignInForm = () => {
             navigate('/profil')
 
         } catch (error) {
-            console.error('Erreur lors de la connexion :', error);
+            if (error.response && error.response.status === 400) {
+                setErrorMessage('Identifiants incorrects. Veuillez réessayer.');
+            } else {
+                console.error('Erreur lors de la connexion :', error);
+            }
         }
-
-        saveUserInfos()
     };
 
     useEffect(() => {
@@ -60,7 +63,9 @@ const SignInForm = () => {
         }
     }
 
-    return (
+return (
+    <div>
+        {errorMessage && <div className='error-msg'>{errorMessage}</div>}
         <form className='signin-form' onSubmit={(e) => handleSubmit(e)}>
             <div className='input-wrapper'>
                 <label htmlFor="username">Username</label>
@@ -84,20 +89,22 @@ const SignInForm = () => {
                     required
                 />
             </div>
-            <div className='remember-me' >
+            <div className='remember-me'>
                 <label>
-                <input
-                type="checkbox"
-                name="remember"
-                checked={remember}
-                onChange={(e) => setRemember(e.target.checked)}
-                />
-                Remember me
+                    <input
+                        type="checkbox"
+                        name="remember"
+                        checked={remember}
+                        onChange={(e) => setRemember(e.target.checked)}
+                    />
+                    Remember me
                 </label>
             </div>
             <button className="button" onClick={saveUserInfos}>Sign In</button>
         </form>
-    );
+    </div>
+);
+
 };
 
 export default SignInForm;

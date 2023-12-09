@@ -9,7 +9,6 @@ import { getUserProfile } from '../reducers/userSlice';
 const User = () => {
     
     const token = useSelector(selectToken);
-    console.log(token);
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
