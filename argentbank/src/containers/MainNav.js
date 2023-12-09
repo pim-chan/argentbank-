@@ -11,7 +11,7 @@ const MainNav = () => {
     return (
         <div className='main-nav'>
             <NavLink to="/">
-                <img src="./images/argentBankLogo.png" className='logo' alt="Logo ArgentBank" />
+                <img src="./images/argentBankLogo.webp" className='logo' alt="Logo ArgentBank" />
             </NavLink>
             <div className="main-nav__items">
                     <NavLink to="/signin">
