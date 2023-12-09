@@ -79,7 +79,7 @@ const UserForm = () => {
                 </div>   
             </form>
             ) : (
-                <div className="welcome">
+                <div className="user-infos">
                     <h1>Welcome Back {userData && userData.userName ? userData.userName : ""} !</h1>
                     <button className='button' onClick={() => setIsEditing(true)}>Edit Name</button>
                 </div>

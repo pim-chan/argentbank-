@@ -1,4 +1,4 @@
-.welcome {
+.user-infos {
     margin: 20px auto 40px;
     width: fit-content;
     display: flex;
@@ -35,13 +35,22 @@
     }
 }
 
-.error-msg {
-    margin: 10px;
-    color: red;
-    text-align: center;
+.user-form button {
+    border: none;
+    color: $text-color;
+    border-radius: 3px;
 }
 
-
+@media (min-width: 320px) and (max-width: 767.99px) {
+    .user-infos {
+        h1 {
+            font-size: 1.5em;
+        }
+        button {
+            font-size: $r-text2;
+        }
+    }
+}
 
 
 

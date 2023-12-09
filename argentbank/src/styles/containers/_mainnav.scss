@@ -33,12 +33,12 @@
     display: flex;
 }
 
-@media (min-width: 360px) and (max-width: 767.99px) {
+@media (min-width: 320px) and (max-width: 401.99px) {
     .main-nav__items {
         font-size: $r-text2;
     }
     .logo {
-        font-size: $r-text2;
+        width: 130px;
     }
 }
 

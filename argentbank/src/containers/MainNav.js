@@ -14,13 +14,15 @@ const MainNav = () => {
                 <img src="./images/argentBankLogo.webp" className='logo' alt="Logo ArgentBank" />
             </NavLink>
             <div className="main-nav__items">
-                    <NavLink to="/signin">
-                        <SignInLink />
-                    </NavLink>
-                {isConnected ? ( 
-                    <Logout /> 
+            {isConnected ? ( 
+                <><NavLink to="/profil">
+                    <SignInLink />
+                </NavLink>
+                <Logout /></>
                 ) : (
-                    ""
+                <NavLink to="/signin">
+                    <SignInLink />
+                </NavLink>
                 )}
             </div>
         </div>
