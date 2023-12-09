@@ -16,5 +16,31 @@
     display: flex;
     align-items: center;
     gap: 15px;
+    font-size: $text2;
 }
+
+.logo {
+    width: 200px;
+    height: 100%;
+}
+
+.icon {
+    height: 1em;
+    fill: #2c3e50;
+}
+
+.user-icon {
+    display: flex;
+}
+
+@media (min-width: 360px) and (max-width: 767.99px) {
+    .main-nav__items {
+        font-size: $r-text2;
+    }
+    .logo {
+        font-size: $r-text2;
+    }
+}
+
+
 

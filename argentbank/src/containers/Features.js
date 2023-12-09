@@ -1,11 +1,12 @@
 import React from 'react';
 import FeatureItem from '../components/FeatureItem';
+import IconChat from '../images/argentBankLogo.png'
 
 const Features = () => {
     return (
         <section className='features'>
             <FeatureItem 
-            image="./images/icon-chat.png"
+            image="../images/argentBankLogo.png"
             title="You are our #1 priority"
             text="Need to talk to a representative? You can get in touch through our 24/7 chat or through a phone call in less than 5 minutes."
             />

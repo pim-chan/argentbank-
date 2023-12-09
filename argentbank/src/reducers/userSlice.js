@@ -37,8 +37,6 @@ export const selectToken = (state) => state.user.token;
 
 export const getUserProfile = () => async (dispatch, getState) => {
   const token = selectToken(getState());
-  console.log(token);
-
 
   try {
     const config = {
