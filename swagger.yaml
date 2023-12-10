@@ -131,6 +131,7 @@ paths:
           description: Invalid Fields
         '500':
           description: Internal Server Error
+
   /user/account/{idAccount}:
     get:
       security:
@@ -138,7 +139,7 @@ paths:
       tags:
         - Transactions Module
       summary: Transactions User API
-      description: API for fetching a specific account and its transactions
+      description: API for fetching transactions of a specific account 
       parameters:
       - in: header
         name: Authorization
@@ -154,7 +155,7 @@ paths:
         '200':
           description: User account retrieved successully
           schema:
-            $ref: '#/definitions/AccountResponse'
+            $ref: '#/definitions/TransactionsResponse'
         '400':
           description: Bad Request
         '500':
@@ -188,7 +189,7 @@ paths:
         '200':
           description: User transaction retrieved successully
           schema:
-            $ref: '#/definitions/ApiResponse'
+            $ref: '#/definitions/TransactionInfosResponse'
         '400':
           description: Bad Request
         '404':
@@ -196,7 +197,7 @@ paths:
         '500':
           description: Internal Server Error
           
-    post:
+    patch:
       security:
         - Bearer: []
       tags:
@@ -225,11 +226,13 @@ paths:
         required: true
         schema:
           $ref: '#/definitions/TransactionInfos'
+      produces:
+        - application/json
       responses:
         '200':
           description: User transaction's informations updated successully
           schema:
-            $ref: '#/definitions/ApiResponse'
+            $ref: '#/definitions/TransactionsInfosResponse'
         '400':
           description: Bad Request
         '500':
@@ -261,7 +264,7 @@ paths:
         '200':
           description: User transaction's informations deleted successully
           schema:
-            $ref: '#/definitions/ApiResponse'
+            $ref: '#/definitions/TransactionsInfosResponse'
         '400':
           description: Bad Request
         '500':
@@ -324,7 +327,7 @@ definitions:
         type: string
 
   # User Account/Transactions
-  AccountsResponse:
+  TransactionInfos:
     type: object
     properties:
       status:
@@ -334,32 +337,69 @@ definitions:
       body:
         type: object
         properties:
-          checking:
+            category:
+              type: string
+              description: Category of the transaction
+            note:
+              type: string
+              description: Note for the transaction
+  AccountsResponse:
+    type: object
+    properties:
+      status:
+        type: integer
+        description: Status of the response
+      message:
+        type: string
+        description: Description of the response status
+      body:
+        type: object
+        properties:
+          accounts:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  description: ID of the account
+                balance:
+                  type: number
+                  description: Balance available on the account             
+  TransactionsResponse: 
+    type: object
+    properties:
+      status:
+        type: integer
+        description: Status of the response
+      message:
+        type: string
+        description: Description of the response status
+      body:
+        type: object 
+        properties:
+          account:
             type: object
             properties:
-              id:
-                type: integer
-              balance:
-                type: number
-          savings:
-            type: object
-            properties:
-              id:
-                type: integer
-              balance:
-                type: number
-          creditcard:
-            type: object
-            properties:
-              id:
-                type: integer
-              balance:
-                type: number
-          
-          
-        
-
-  TransactionInfos:
+              transactions:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    date:
+                      type: string
+                      format: date-time  
+                      description: Date of the transaction
+                    description:
+                      type: string
+                      description: Description of the transaction
+                    amount:
+                      type: number
+                      description: Amount of the transaction
+                    remaining_balance:
+                      type: number
+                      description: Remaining balance after the transaction
+  TransactionInfosResponse:
     type: object
     properties:
       status:
@@ -373,14 +413,13 @@ definitions:
           properties:
             transaction_id:
               type: string
-            date:
+              description: ID of the transaction
+            transaction_type:
               type: string
-              format: date
-            description:
+              description: Type of the transaction
+            category:
               type: string
-            amount:
-              type: number
-              format: float
-            balance:
-              type: number
-              format: float
+              description: Category of the transaction
+            note:
+              type: string
+              description: Note for the transaction
