@@ -235,29 +235,26 @@ definitions:
       body:
         type: object 
         properties:
-          account:
-            type: object
-            properties:
-              transactions:
-                type: array
-                items:
-                  properties:
-                    id: 
-                      type: integer
-                      description: ID of the transaction
-                    date:
-                      type: string
-                      format: date-time  
-                      description: Date of the transaction
-                    description:
-                      type: string
-                      description: Description of the transaction
-                    amount:
-                      type: number
-                      description: Amount of the transaction
-                    remaining_balance:
-                      type: number
-                      description: Remaining balance after the transaction
+          transactions:
+            type: array
+            items:
+              properties:
+                id: 
+                  type: integer
+                  description: ID of the transaction
+                date:
+                  type: string
+                  format: date-time  
+                  description: Date of the transaction
+                description:
+                  type: string
+                  description: Description of the transaction
+                amount:
+                  type: number
+                  description: Amount of the transaction
+                remaining_balance:
+                  type: number
+                  description: Remaining balance after the transaction
   TransactionInfosResponse:
     type: object
     properties:
