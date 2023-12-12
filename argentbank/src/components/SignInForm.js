@@ -26,7 +26,7 @@ const SignInForm = () => {
             
             const token = response.data.body.token;
             
-            dispatch(login(token));
+            dispatch(login(token)); 
 
             navigate('/profil')
 

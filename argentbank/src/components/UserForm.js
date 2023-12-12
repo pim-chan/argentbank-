@@ -7,6 +7,7 @@ const UserForm = () => {
 
     const userData = useSelector(selectUser);
     const token = useSelector(selectToken);
+    const [username, setUsername] = useState('')
     const [isEditing, setIsEditing] = useState(false);
 
     const dispatch = useDispatch() 
@@ -16,7 +17,7 @@ const UserForm = () => {
 
         try {
             const formData = {
-                userName: userData.userName,
+                userName: username
             };
             const config = {
                 method: 'PUT',
@@ -49,8 +50,9 @@ const UserForm = () => {
                         className='input'
                         type="text"
                         id="user-name"
-                        value={userData.userName} 
-                        onChange={(e) => dispatch(updateUsername(e.target.value))}
+                        value={username} 
+                        placeholder= {userData.userName}
+                        onChange={(e) => setUsername(e.target.value)}
                     />
                 </div>
                 <div className='input-wrapper'>

@@ -19,8 +19,7 @@ const User = () => {
         }
       
         dispatch(getUserProfile())
-        .then(() => {
-        })
+
         .catch((error) => {
           console.error('Erreur lors de la récupération du profil :', error);
         });

@@ -21,16 +21,13 @@ export const userSlice = createSlice({
     userProfile: (state, action) => {
       state.user = action.payload; 
     }, 
-    updateUsername: (state, action) => {
-      state.user.userName = action.payload; 
-    }, 
     logout: (state) => {
       state.user = null; 
     }, 
   },
 });
 
-export const { login, logout, userProfile, updateUsername } = userSlice.actions;
+export const { login, logout, userProfile, updateUsername } = userSlice.actions; // Actions crées automatiquement basées sur les reducers du même nom
 
 export const selectUser = (state) => state.user.user;
 export const selectToken = (state) => state.user.token;
