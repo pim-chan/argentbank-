@@ -263,16 +263,14 @@ definitions:
       message:
         type: string
       body:
-        type: array
-        items:
-          type: object
-          properties:
-            transaction_type:
-              type: string
-              description: Type of the transaction
-            category:
-              type: string
-              description: Category of the transaction
-            note:
-              type: string
-              description: Note for the transaction
+        type: object
+        properties:
+          transaction_type:
+            type: string
+            description: Type of the transaction
+          category:
+            type: string
+            description: Category of the transaction
+          note:
+            type: string
+            description: Note for the transaction
