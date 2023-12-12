@@ -17,7 +17,7 @@ paths:
       security:
         - Bearer: []
       tags:
-        - User Module
+        - Account User Module
       summary: User Accounts API
       description: API for fetching user accounts
       parameters:
@@ -43,7 +43,7 @@ paths:
       security:
         - Bearer: []
       tags:
-        - Transactions Module
+        - Account User Module
       summary: User account and its transactions API
       description: API for fetching transactions of a specific account 
       parameters:
@@ -74,7 +74,7 @@ paths:
       security:
         - Bearer: []
       tags:
-        - Transactions Module
+        - Account User Module
       summary: Transactions User API
       description: API for fetching a specific transaction
       parameters:
@@ -110,7 +110,7 @@ paths:
       security:
         - Bearer: []
       tags:
-        - Transactions Module
+        - Account User Module
       summary: Transactions User API
       description: API for updating a transaction's informations
       parameters:
@@ -150,7 +150,7 @@ paths:
       security:
         - Bearer: []
       tags:
-        - Transactions Module
+        - Account User Module
       summary: Transactions User API
       description: API for deleting a transaction's specific information
       parameters:
