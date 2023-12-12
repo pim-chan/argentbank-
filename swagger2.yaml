@@ -108,7 +108,7 @@ paths:
           description: Transaction not found
         '500':
           description: Internal Server Error       
-    post:
+    put:
       security:
         - Bearer: []
       tags:
@@ -148,38 +148,7 @@ paths:
           description: Bad Request
         '500':
           description: Internal Server Error
-    delete:
-      security:
-        - Bearer: []
-      tags:
-        - Account User Module
-      summary: Transactions User API
-      description: API for deleting a transaction's specific information
-      parameters:
-      - in: header
-        name: Authorization
-        description: Attach Bearer JWT token
-        type: string
-        required: true
-      - in: path
-        name: idAccount
-        description: ID of the account
-        required: true
-        type: string
-      - in: path
-        name: idTransaction
-        description: ID of the transaction
-        required: true
-        type: string
-      responses:
-        '200':
-          description: User transaction's informations deleted successfully
-          schema:
-            $ref: '#/definitions/TransactionInfosResponse'
-        '400':
-          description: Bad Request
-        '500':
-          description: Internal Server Error
+
 securityDefinitions:
   Bearer:
     type: apiKey
