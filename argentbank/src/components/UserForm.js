@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector} from 'react-redux';
-import { selectToken, selectUser, updateUsername, userProfile } from '../reducers/userSlice';
+import { selectToken, selectUser, userProfile } from '../reducers/userSlice';
 import axios from 'axios';
 
 const UserForm = () => {

@@ -106,7 +106,7 @@ paths:
           description: Transaction not found
         '500':
           description: Internal Server Error       
-    patch:
+    post:
       security:
         - Bearer: []
       tags:
@@ -214,7 +214,7 @@ definitions:
         properties:
           accounts:
             type: array
-            items:
+            items: 
               type: object
               properties:
                 id:
@@ -241,8 +241,10 @@ definitions:
               transactions:
                 type: array
                 items:
-                  type: object
                   properties:
+                    id: 
+                      type: integer
+                      description: ID of the transaction
                     date:
                       type: string
                       format: date-time  
@@ -268,9 +270,6 @@ definitions:
         items:
           type: object
           properties:
-            transaction_id:
-              type: string
-              description: ID of the transaction
             transaction_type:
               type: string
               description: Type of the transaction

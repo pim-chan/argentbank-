@@ -38,6 +38,18 @@ const SignInForm = () => {
             }
         }
     };
+    
+    const saveUserInfos = () => {
+        if (remember) {
+            localStorage.setItem('email', email);
+            localStorage.setItem('password', password);
+            localStorage.setItem('remember', 'true');
+        } else {
+            localStorage.removeItem('email');
+            localStorage.removeItem('password');
+            localStorage.removeItem('remember');
+        }
+    }
 
     useEffect(() => {
         const storedEmail = localStorage.getItem('email');
@@ -51,17 +63,6 @@ const SignInForm = () => {
         }
     }, []);
 
-    const saveUserInfos = () => {
-        if (remember) {
-            localStorage.setItem('email', email);
-            localStorage.setItem('password', password);
-            localStorage.setItem('remember', 'true');
-        } else {
-            localStorage.removeItem('email');
-            localStorage.removeItem('password');
-            localStorage.removeItem('remember');
-        }
-    }
 
 return (
     <div>
