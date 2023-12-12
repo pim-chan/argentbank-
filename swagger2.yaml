@@ -66,6 +66,8 @@ paths:
             $ref: '#/definitions/TransactionsResponse'
         '400':
           description: Bad Request
+        '404':
+          description: Account not found
         '500':
           description: Internal Server Error
 
